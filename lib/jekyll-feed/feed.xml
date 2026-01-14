@@ -68,7 +68,7 @@
   {% endunless %}
   {% assign posts = posts | sort: "date" | reverse %}
   {% assign posts_limit = site.feed.posts_limit | default: 10 %}
-  {% assign current_date = "today" | date: '%s' | integer %}
+  {% assign current_date = "now" | date: "%Y-%m-%d" | date: '%s' | integer %}
   {% for post in posts limit: posts_limit %}
     {% assign post_date = post.date | date: '%s' | integer %}
     
